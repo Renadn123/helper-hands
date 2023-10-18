@@ -1,0 +1,220 @@
+<?php
+
+$conn = mysqli_connect('localhost','root','','contact_form') or die('connection failed');
+
+if(isset($_POST['send'])){
+
+   $FirstName = mysqli_real_escape_string($conn, $_POST['FirstName']);
+   $LastName = mysqli_real_escape_string($conn, $_POST['LastName']);
+   $Email = mysqli_real_escape_string($conn, $_POST['Email']);
+   $Phone = mysqli_real_escape_string($conn, $_POST['Phone']);
+   $Bio = mysqli_real_escape_string($conn, $_POST['Bio']);
+
+   $select_message = mysqli_query($conn, "SELECT * FROM `contact_form` WHERE FirstName = '$FirstName' AND lLastName = '$LasttName' AND Email = '$Email' AND Phone = '$Phone' AND Bio = '$Bio'") or die('query failed');
+   
+   if(mysqli_num_rows($select_message) > 0){
+      $message[] = 'message sent already!';
+   }else{
+      mysqli_query($conn, "INSERT INTO `contact_form`(name, email, number, message) VALUES('$name', '$email', '$number', '$msg')") or die('query failed');
+      $message[] = 'message sent successfully!';
+   }
+
+}
+
+?>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="..\css\BabysitterProfile.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" type="image/x-icon" href=..\Images\LOGO.png>
+	<title>Babysitter profile</title>
+	
+  </head>
+  <body>
+  
+  <div class="menu-conatiner">
+    <ul class="menu">
+	  <li class="menuItem"><a class="status" href="../html/parentHome.html">Home</a></li>
+      <li class="menuItem"><a class="status" href="../html/BabysitterOverview.html">Back</a></li>
+      <li class="menuItem" id="logout"><a href="#divTwo"> <img class="menu-icon" src="https://cdn-icons-png.flaticon.com/512/4263/4263207.png" alt="logout icon"> </a></li>
+    </ul>
+  </div>
+  
+  
+  
+<div class="resume_wrapper">
+	<div class="resume_left">
+		<div class="resume_image">
+			<img src="../Images/pic1.jpg"  alt="user">
+		</div>
+		<div class="resume_bottom">
+			<div class="resume_item resume_namerole">
+				<div class="name">Renad</div>
+				<div class="role">Babysitter</div>
+			</div>
+			<div class="resume_item resume_profile">
+				<div class="resume_title">Profile</div>
+				<div class="resume_info">Hi there! I'm Renad. I recently earned my degree in early childhood education from Autumn College, USA
+				and I have been caring for children for 12 years as a babysitter and as the oldest of four siblings.
+				I have a lot of experience working with infants and toddlers, and I also spent three years babysitting a six-year-old girl on the autism spectrum.
+				I truly love working with young kids, and I approach each child as an individual who I get to help grow and teach.m.</div>
+			</div>
+			<div class="resume_item resume_address">
+				<div class="resume_title">My offers</div>
+				<div class="resume_info">
+					<strong>1 child     17.73RS/h</strong>
+				<br>
+				<strong>2 children  20.30RS/h</strong>
+				<br>
+				<strong>3 children or more 25RS/h</strong>
+				
+				</div>
+			</div>
+			<div class="resume_item resume_contact">
+				<div class="resume_title">Contact</div>
+				<div class="resume_info">
+					<div class="resume_subtitle">Phone</div>
+					<div class="resume_subinfo">
+					<p><a href="tel:+0503200077">050320007</a></p>
+					</div>
+				</div>
+				<div class="resume_info">
+					<div class="resume_subtitle">Email</div>
+					<div class="resume_subinfo">
+					<p><a href="mailto:renad@gmail.com"> renad@gmail.com</a></p></div>
+				</div>
+			</div>
+			<div class="Rate">
+			<h2>Star Rating</h2>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+</div>
+		</div>
+	</div>
+	<div class="resume_right">
+		<div class="resume_item resume_namerole">
+			<div class="name">R E N A D</div>
+			<div class="role">Babysitter</div>
+		</div>
+		<div class="resume_item resume_education">
+			<div class="resume_title">Education</div>
+			<div class="resume_info">
+				<div class="resume_data">
+					<div class="year">2015  - 2017 </div>
+					<div class="content">
+						<p>A-Level ,convenary High school</p>
+						<p>Languages :Spanish , Japanese</p>
+					</div>
+				</div>
+				<div class="resume_data">
+					<div class="year">2018 - 2021</div>
+					<div class="content">
+						<p>Autumn College</p>
+						<p>Ldegree in early childhood education from Autumn College.</p>
+					</div>
+				</div>
+				<div class="resume_data">
+					<div class="year">2021 - now</div>
+					<div class="content">
+						<p>Babysiting</p>
+						<p>working as a babysitter</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="resume_item resume_experience">
+			<div class="resume_title">Service</div>
+			<div class="resume_info">
+				<div class="resume_data">
+					<div class="year">infants</div>
+					<div class="content">
+						<p>infant babies</p>
+						<p>i do accept babysitting jobs for infant babies </p>
+					</div>
+				</div>
+				<div class="resume_data">
+					<div class="year">Homeworks </div>
+					<div class="content">
+						<p>doing homeworks </p>
+						<p>i do accept jobs contain doing homeworks with children</p>
+					</div>
+				</div>
+				<div class="resume_data">
+					<div class="year">special need</div>
+					<div class="content">
+						<p>chlidren with special need</p>
+						<p>i do accept babysitting jobs for chlidren with special need </p>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+  <div class="overlay" id="divTwo">
+    <div class="wrapper2" id="wrapperlogout">
+      <h2>Log out</h2><a class="close" href="BabysitterProfile.html">&times;</a>
+      <div class="content">
+        <div class="container">
+          <p>are you sure you want to log-out? <br> </p>
+          <a href="Home.html"> <button type="submit" name="button" class="danger" id="yes-logout">Yes</button> </a>
+          <a href="BabysitterProfile.html"> <button type="submit" name="button" id="no-logout">No</button> </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- new -->
+  
+    <div class="parent">
+   <div class="absolute">
+
+ <div id="pending-requests">
+  <div id="previous-requests">
+    <h1>Reviews</h1>
+    <div class="slider">
+      <input type="radio" name="testimonial" id="x-1" checked>
+      <input type="radio" name="testimonial" id="x-2">
+
+      <div class="testimonials" id="prev-requests">
+        <div class="item" id="goat4" for="x-1">
+          <h2>Renad</h2>
+            <p>Great with the kids and do Help them with homework</p>
+            <p>rate: ⭐⭐⭐</p>
+        </div>
+
+        <div class="item" id="goat5" for="x-2">
+          <h2>Mise </h2>
+            <p>so good and dose cooking food for the kids</p>
+            <p>rate: ⭐⭐⭐⭐⭐</p>
+        </div>
+
+
+      </div>
+      <div class="dots">
+        <label for="x-1"></label>
+        <label for="x-2"></label>
+      </div>
+
+    </div>
+  </div>
+  
+  </div>
+</div>
+</div>
+  
+  
+
+  
+  </body>
+</html>

@@ -1,0 +1,330 @@
+
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.logo-container{
+  position: relative;
+  padding: 0 0 0 0;
+  margin: 0;
+  margin-bottom: -4px;
+  background: #F5EFE6;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  background-image: url("../Images/Banner.png");
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 20px;
+}
+
+.LogoPicture{
+  width:10%;
+  height:50%;
+  margin-top: 5px;
+  margin-right: 1500px;
+  border-radius: 50px;
+}
+
+h4{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+}
+
+body{
+  margin: 0;
+  font-family: 'Merriweather', serif;
+}
+#Logo{
+  width: 150px;
+  height: 110px;
+
+}
+#verticalLine{
+align-self: center;
+border-left-width:1px;
+margin-top: 0.5em;
+height: 30px;
+border-left: solid;
+border-left-color: #686875;
+display: inline;
+
+}
+
+#itemmenu1 , #itemmenu2{
+  font-size: 28px;
+}
+
+header div h4{
+    display: inline;
+    margin-left: 1em;
+    color: #2b1c5f;
+    font-weight: bold;
+	font-family: 'Coiny';
+    align-self: center;
+    margin-top: 15px;
+
+}
+#navbarNav{
+  margin-left: 1em;
+  font-family: 'merriweather';
+  font-size: 22px;
+
+
+}
+#navbarNav ul li a{
+  color: #7990f8;
+
+}
+#navbarNav ul li{
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size:30px;
+    font-weight: bold;
+
+
+}
+#signInBtn{
+    background-color:#ebedf3;
+    color: rgb(88, 85, 85);
+    font-weight:700;
+    font-size:25px;
+	font-family: 'merriweather';
+    border: none;
+    height: 45px;
+    width: 110px;
+    border-radius: 35px;
+    align-self: center;
+    margin-right: 2em;
+    padding: 0 10px 0 10px;
+}
+#SignInAnchor{
+    margin-left: auto;
+}
+#signInBtn:hover{
+    cursor: pointer;
+    background-color: #2b1c5f;
+}
+#sidemenu-btn:focus{
+    box-shadow: none;
+    overflow-x: hidden;
+    background-size:cover;
+    font-family: 'Merriweather', serif;
+  }
+  #sub{
+    background-image: url('..\Images\PinkPath.png');
+    background-size:cover;
+    z-index: -1;
+    position: absolute;
+    margin-right: -3em;
+    margin-top: -8em;
+    height: inherit;
+    margin-left: auto;
+    width: 65%;
+
+  }
+  #container{
+    justify-content: space-around;
+  }
+  #container img{
+    width: 300px;
+    height: 300px;
+  }
+  #textDiv{
+    flex-direction: column;
+    align-self: center;
+    font-size: 1.5em;
+	font-family: 'merriweather';
+
+
+  }
+  .titles{
+    color: #1a2350;
+
+
+  }
+
+  #aboutusTitle{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+  }
+
+
+  #join-us-Btn{
+    border: none;
+    color: white;
+    background-color: #111B47;
+    width: 6em;
+    font-size: 30px;
+	font-family: 'Merriweather';
+    align-self:left;
+    margin-top: 1em;
+    margin-left: 40px;
+    border-radius: 30px;
+    right: -15em;
+    padding: 5px;
+  }
+
+  #join-us-Btn:hover{
+    background-color: #2F3964;
+
+
+
+
+  }
+  #about-us-img{
+    width: 400px;
+    height: 300px;
+  }
+  #locationContainer{
+    background-color: #BAE3F4;
+    min-height: 250px;
+    padding-top: 2em;
+    margin-top: 5em;
+    display: flex;
+    color: #111B47;
+    font-size: 1.5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	font-family: 'merriweather';
+  }
+  #locationIcon{
+    font-size: 3em;
+    color:#37447E;
+  }
+  #location{
+    color:#37447E;
+  }
+  #bcPinkPath{
+    position: absolute;
+    top: -3em;
+    right: -15em;
+    filter: saturate(160%);
+    z-index: -1;
+    width: 1030px;
+    height: 105vh;
+
+  }
+  #AboutUsText{
+    font-size: 1.5em;
+	font-family: 'merriweather';
+  }
+
+  #ServicesList{
+    height: fit-content;
+    display: flex;
+    overflow: auto;
+    max-width: 1150px;
+}
+.cards{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: 1px 1px 15px 1px #ebebeb;
+    min-width: 250px;
+    height: fit-content;
+    margin-right: 1.5em;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.cards p{
+    margin-top: 2em;
+    color: #737ca7;
+    font-weight: bold;
+}
+
+ .cards:hover{
+     cursor:pointer;
+ }
+ .next-previous{
+     background-color: transparent;
+     border: none;
+     font-size: 6em;
+     font-family: 'Merriweather';
+
+     color: #6e6e6e;
+ }
+ .collap{
+  transition: 0.4s;
+}
+.collap:hover{
+  background-color: #ebebeb;
+}
+.active{
+  background-color: #ebebeb;
+}
+.content{
+  display: none;
+  height: fit-content;
+  max-width: 250px;
+  padding: 4em;
+}
+hr{
+  width: 100%;
+}
+
+.next-previous:hover{
+    cursor: pointer;
+    background-color: #dbdbdb;
+    border-radius: 35px;
+}
+#ContactUs{
+   width: 100%;
+   color:#2f3969;
+   /*background-color: #cbd1f1;*/
+   padding-top: 5em;
+   padding-bottom: 22em;
+   font-size: 1.5em;
+
+ }
+ @media screen and (max-width: 991px) {
+     #ServicesList{
+         max-width: 170px;
+     }
+ }
+  footer{
+    background-color: #ECEFF9;
+    padding: 4em 6em 1em 6em;
+    display: flex;
+    flex-direction: column;
+  }
+  footer h6{
+    color: #192453;
+    font-size: 1.5em;
+
+  }
+  #copyRight{
+    color: #808080;
+    font-size: 24px;
+    margin: auto;
+  }
+  .contact{
+    color: white;
+    background-color: #293568;
+    border-radius: 120px;
+    padding: 9px 10px 9px 10px;
+    font-size: 25px;
+    font-family: 'Merriweather';
+    cursor: pointer;
+    margin-bottom: -20px;
+
+
+  }
+  .contact:hover{
+    color: white !important;
+  }
